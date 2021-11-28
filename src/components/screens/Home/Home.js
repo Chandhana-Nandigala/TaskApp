@@ -1,7 +1,6 @@
-import React from 'react';
-import {View, Image, ScrollView} from 'react-native';
+import React, {useState} from 'react';
+import {View, Image, ScrollView, Text, FlatList} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {useNavigation} from '@react-navigation/native';
 
 //importing reusable components
 import Header from '../../helpers/Header/Header';
@@ -13,24 +12,30 @@ import {Icons} from '../../../constants/Icons';
 import Tiles from './helpers/Tiles/Tiles';
 
 const Home = () => {
-  const navigator = useNavigation();
+  const [item, setItem] = useState([{id: 1}]);
+  const renderData = () => {
+    return (
+      <SafeAreaView style={styles.container}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <Header left={'DemoApp'} right={Icons.more} />
+          <Heading />
+          <SearchBox />
+          <Image
+            source={Icons.garden}
+            style={styles.banner}
+            resizeMode="center"
+          />
+          <Tiles />
+        </ScrollView>
+      </SafeAreaView>
+    );
+  };
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <Header left={'DemoApp'} right={Icons.more} />
-        <Heading />
-        <SearchBox />
-        <Image
-          source={Icons.garden}
-          style={styles.banner}
-          resizeMode="center"
-        />
-        <View style={styles.tilesContainer}>
-          <Tiles />
-          <Tiles />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <FlatList
+      data={item}
+      renderItem={renderData}
+      showsVerticalScrollIndicator={false}
+    />
   );
 };
 export default Home;

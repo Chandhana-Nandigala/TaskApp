@@ -7,9 +7,10 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     // backgroundColor: colors.white,
     height: 60,
+    marginHorizontal: 12,
   },
   imgStyle: {
-    height: 20,
-    width: 20,
+    height: 18,
+    width: 18,
   },
 });

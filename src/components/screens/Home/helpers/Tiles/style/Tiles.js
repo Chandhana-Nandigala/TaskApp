@@ -15,6 +15,7 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.36,
     shadowRadius: 6.68,
     elevation: 11,
+    alignSelf: 'center',
   },
   imgContainer: {
     height: 200,
@@ -22,18 +23,19 @@ export const styles = StyleSheet.create({
     borderRadius: 20,
   },
   heading: {
-    marginHorizontal: 20,
-    marginVertical: 15,
+    marginHorizontal: 15,
+    marginVertical: 10,
     fontSize: 18,
     fontWeight: '500',
     color: 'black',
   },
   tileInnerContainer: {
     flexDirection: 'row',
-    marginHorizontal: 20,
+    marginHorizontal: 15,
     justifyContent: 'space-between',
     height: 40,
     alignItems: 'center',
+    // backgroundColor: 'green',
   },
   btnContainer: {
     height: 40,
