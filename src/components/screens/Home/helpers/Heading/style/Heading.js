@@ -8,9 +8,11 @@ export const styles = StyleSheet.create({
   headingLineOne: {
     fontSize: 20,
     fontWeight: '400',
+    color: 'black',
   },
   headingLineTwo: {
     fontSize: 20,
     fontWeight: 'bold',
+    color: 'black',
   },
 });

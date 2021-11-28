@@ -15,16 +15,17 @@ export const styles = StyleSheet.create({
     width: '85%',
   },
   imgStyle: {
-    height: 25,
-    width: 25,
+    height: 20,
+    width: 20,
     tintColor: 'green',
   },
   imgContainer: {
     backgroundColor: 'orange',
     height: '85%',
-    width: '15%',
+    width: '12%',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
+    marginHorizontal: 5,
   },
 });
