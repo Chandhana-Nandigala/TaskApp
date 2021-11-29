@@ -8,17 +8,18 @@ export const styles = StyleSheet.create({
   },
   imgContainer: {
     marginHorizontal: 22,
-    flexGrow: 1,
+    // flexGrow: 1,
     backgroundColor: '#212121',
     elevation: 2,
-    height: 60,
+    height: 46,
+    width: 45,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 100,
   },
   imgStyle: {
-    width: 30,
-    height: 30,
+    width: 25,
+    height: 25,
     tintColor: colors.orange,
   },
 });
